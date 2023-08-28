@@ -1,0 +1,27 @@
+[
+  {
+    "heading": "Sunday",
+    "news": "This is the first news of sunday."
+  },
+  {
+    "heading": "Monday",
+    "news": "This is the second news of monday."
+  }, {
+    "heading": "Tuesday",
+    "news": "This is the third news of tuesday."
+  },
+  {
+    "heading": "Wednusday",
+    "news": "This is the fourth news of monday."
+  }, {
+    "heading": "Thursday",
+    "news": "This is the fifth news of thursday."
+  },
+  {
+    "heading": "Friday",
+    "news": "This is the sixth news of friday."
+  }, {
+    "heading": "Saturday",
+    "news": "This is the seventh news of saturday."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "image_url": "https://images.pexels.com/photos/15153567/pexels-photo-15153567/free-photo-of-horses-on-green-grass-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "A beautiful landscape"
+  },
+  {
+    "image_url": "https://images.pexels.com/photos/17888984/pexels-photo-17888984/free-photo-of-man-standing-on-camper-in-evening.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "A cute animal"
+  },
+  {
+    "image_url": "https://images.pexels.com/photos/17908342/pexels-photo-17908342/free-photo-of-aerial-view-of-a-sydney-australia.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    "description": "A beautiful landscape"
+  },
+  {
+    "image_url": "https://images.pexels.com/photos/13018720/pexels-photo-13018720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr",
+    "description": "A cute animal"
+  }
+]
