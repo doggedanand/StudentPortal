@@ -20,7 +20,7 @@ fetch("/db/crowsel.json")
 
     // For show carousel again and again
     const carouselItems = document.querySelectorAll(".carousel-item");
-    console.log("crouselItem :", carouselItems);
+  
     let currentItemIndex = 0;
 
     function showCurrentItem() {
@@ -54,6 +54,6 @@ fetch("/db/crowsel.json")
     nextButton.addEventListener("click", showNextItem);
     prevButton.addEventListener("click", showPreviousItem);
 
-    setInterval(showNextItem, 2000);
+    setInterval(showNextItem, 5000);
   })
   .catch((error) => console.error("Error loading JSON file:", error));
