@@ -1,15 +1,42 @@
-    <!-- Header Start  -->
-    <nav class="navbar bg-white fixed-top">
-        <div class="container">
-           <a href="/index.html">
-            <img src="img/logo.png" width="60" alt="">
-        </a>
-            <div class="d-flex">
-                <a class="navbar-brand fw-bold" href="/login.html">Login</a>
-                <a class="navbar-brand fw-bold" href="/register.html">Registration</a>
-                <a class="navbar-brand fw-bold" href="/contactus.html">Contact US</a>
-            </div>
-            
-        </div>
-    </nav>
-    <!-- Header End  -->
+<!-- Header Start  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">
+      <img src="img/logo.png" width="60" alt="Logo" />
+      Student Portal
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      onclick="onclickNavigation()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" id="registrationLink" href="register.html"
+            >Registration</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="loginLink" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contactUsLink" href="contactus.html"
+            >Contact US</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header End  -->
+
+

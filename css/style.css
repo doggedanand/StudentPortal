@@ -1,8 +1,15 @@
-html{
-    margin-top: 75px;
-}
-.common-color{
-    background-color: #058FD01A;
-}
+/* .common-color {
+  background-color: #add8e6;
+} */
 
-
+.common-color {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* background-color: #d3e7f1; */
+  background-color: #198754;
+}
+.my-bootstrap-class {
+  width: 300px; /* Set the desired width */
+  height: 200px; /* Set the desired height */
+  overflow: hidden; /* Optional, to hide content if it exceeds the fixed dimensions */
+}
