@@ -1,12 +1,11 @@
-/* .common-color {
-  background-color: #add8e6;
-} */
-
+*{
+  /* margin: 10px; */
+}
 .common-color {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   /* background-color: #d3e7f1; */
-  background-color: #198754;
+  background-color: #ECECEC;
 }
 .my-bootstrap-class {
   width: 300px; /* Set the desired width */
