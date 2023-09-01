@@ -2,11 +2,13 @@
   {
     "img": "https://i.postimg.cc/tRVyL66F/HTML-Full-Form.jpg",
     "heading": " This is the heading",
-    "content": "This is the content from json file"
+    "content": "This is the content from json file",
+    "row":"first"
   },
   {
     "img": "https://i.postimg.cc/tRVyL66F/HTML-Full-Form.jpg",
     "heading": " This is the heading",
-    "content": "This is the content from json file"
+    "content": "This is the content from json file",
+    "row": "second"
   }
 ]
