@@ -8,9 +8,9 @@
   background-color: #ECECEC;
 }
 .my-bootstrap-class {
-  width: 300px; /* Set the desired width */
-  height: 200px; /* Set the desired height */
-  overflow: hidden; /* Optional, to hide content if it exceeds the fixed dimensions */
+  width: 300px;  
+  height: 200px;  
+  overflow: hidden;  
 }
 
 
