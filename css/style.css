@@ -17,3 +17,8 @@
  /***** Crowsel Section *****/
  
 /***** End Section *****/
+
+
+.pointer-cursor {
+  cursor: pointer;
+}

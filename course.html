@@ -3,62 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Course Page</title>
-    <!--  Bootstrap CSS Link -->
+    <title>Student || Dashboard</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      .pointer-cursor {
+        cursor: pointer;
+      }
+    </style>
   </head>
-  
-  <body style="padding: 75px;">
-    <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
-    >
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="">
-          <img
-            src="/img/logo.png"
-            class="img-fluid"
-            alt="navbar logo"
-            width="60"
-          />
-          Student Dashboard</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon" onclick="showNavToogler()"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Courses</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <body style="padding: 75px">
+    <!-- Student Navbar -->
+    <div class="student-navbar"></div>
 
-    <!-- Page Content -->
-    <div class="container mt-5">
+    <div class="container-fluid my-5">
       <div class="row">
+        <div id="side-bar"></div>
         <div class="col-lg-9">
           <h1>Addmission Open for below courses.</h1>
           <p>Your Courses:</p>
@@ -72,7 +34,13 @@
         </div>
       </div>
     </div>
+    <!-- Footer -->
+    <footer class="footer"></footer>
 
-    <script src="js/student-home-page.js"></script>
+    <!-- Javascript Start -->
+    <script src="/js/footer.js"></script>
+    <script src="/js/student-home-page.js"></script>
+    <script src="js/loadStudentNavbar.js"></script>
+    <script src="js/loadStudentSideBar.js"></script>
   </body>
 </html>
