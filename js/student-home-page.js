@@ -16,15 +16,16 @@ function showNavToogler() {
 //     li.classList.add("active");
 //   });
 // });
-
+// For active student side bar menu
 setTimeout(() => {
   const activePage = window.location.pathname;
-  console.log("activePage :", activePage);
-  const navLinks = document.querySelectorAll(".list-group-item");
-  console.log("navlinks :", navLinks);
-  navLinks.forEach((link) => {
-    const linkHref = link.getAttribute("href");
-console.log('linkHref :',linkHref)
+
+  const menuLinks = document.querySelectorAll(".list-group-item");
+  menuLinks.forEach((link) => {
+    const anchorTag = link.querySelector("a");
+
+    const linkHref = anchorTag.getAttribute("href");
+
     if (linkHref && activePage.includes(linkHref)) {
       link.classList.add("fw-bold", "active");
     }
