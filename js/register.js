@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  
   document
     .getElementById("registerButton")
     .addEventListener("click", function (event) {
@@ -24,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         password: password,
         gender: gender,
       };
-
+    
       const userDataJSON = JSON.stringify(user);
 
       // Save user data to local storage
