@@ -18,10 +18,7 @@ function showNavToogler() {
 // });
 
 // For active student side bar menu
-// function activeSideBar(){
-  console.log('log in function')
-// setTimeout(() => {
-  console.log('log in settimeout')
+
 
   const activePage = window.location.pathname;
 
@@ -39,8 +36,7 @@ function showNavToogler() {
       link.classList.add("fw-bold", "active");
     }
   });
-// }, 50);
-// }
+
 
 // For Active Nav link
 setTimeout(() => {
@@ -56,3 +52,4 @@ setTimeout(() => {
     });
   });
 }, 50);
+
