@@ -16,21 +16,27 @@ function showNavToogler() {
 //     li.classList.add("active");
 //   });
 // });
+
 // For active student side bar menu
-setTimeout(() => {
+
+
   const activePage = window.location.pathname;
 
   const menuLinks = document.querySelectorAll(".list-group-item");
+  console.log('menuLinks is :',menuLinks)
   menuLinks.forEach((link) => {
+    link.classList.remove("active", "fw-bold");
     const anchorTag = link.querySelector("a");
-
+    console.log('link :',anchorTag);
+    
     const linkHref = anchorTag.getAttribute("href");
-
+    
+    console.log('link data is :',linkHref);
     if (linkHref && activePage.includes(linkHref)) {
       link.classList.add("fw-bold", "active");
     }
   });
-}, 50);
+
 
 // For Active Nav link
 setTimeout(() => {
@@ -46,3 +52,4 @@ setTimeout(() => {
     });
   });
 }, 50);
+

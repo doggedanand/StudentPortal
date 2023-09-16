@@ -14,7 +14,7 @@ function onclickNavigation() {
   ul.classList.toggle("show");
 }
 
-// setTimeout(() => {
+// setTimeout(() => {student-home-page
 //   const activePage = window.location.pathname;
 //   // console.log(activePage, "active page");
 //   const navLinks = document.querySelectorAll(".nav-link");
