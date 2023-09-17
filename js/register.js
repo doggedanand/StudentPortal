@@ -90,5 +90,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Function to generate a unique ID (you can use any unique ID generation method you prefer)
 function generateUniqueId() {
-  return Date.now().toString(36) + Math.random().toString(36).substr(2);
+  return Math.floor(Math.random() * 90000) + 10000;
 }
