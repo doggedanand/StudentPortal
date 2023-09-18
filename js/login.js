@@ -45,6 +45,9 @@ loginForm.addEventListener("submit", function (event) {
   }
 });
 
+
+
+/*
 // Check isLogin before accessing the registration page
 const registrationLink = document.getElementById("registration-link");
 registrationLink.addEventListener("click", function (event) {
@@ -54,3 +57,4 @@ registrationLink.addEventListener("click", function (event) {
     window.location.href = "/student-home-page.html";
   }
 });
+*/
