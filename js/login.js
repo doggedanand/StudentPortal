@@ -1,7 +1,6 @@
 // // TODO: later I have to check if email id is already exits then user unable to register
 // // from that email
 
-
 const loginForm = document.querySelector("form");
 let isLogin = false; // Initialize isLogin as false
 
@@ -9,8 +8,9 @@ loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
 
+  const password = document.getElementById("password").value;
+  console.log("username :", username);
   // Fetch all user data from local storage
   const allUserDataJSON = localStorage.getItem("userData");
 
@@ -19,7 +19,7 @@ loginForm.addEventListener("submit", function (event) {
 
     // Loop through all user data
     for (const userData of allUserData) {
-      console.log("userData :", userData);
+      console.log("userData from localStorage :", userData);
       if (
         (userData.email === username || userData.username === username) &&
         userData.password === password
@@ -30,9 +30,8 @@ loginForm.addEventListener("submit", function (event) {
         isLogin = true;
 
         window.location.href = "/student-home-page.html";
-        return;
       } else if (
-        userData.email !== username ||
+        (userData.email !== username && userData.username !== username) ||
         userData.password !== password
       ) {
         alert("Invalid username/email or password. Please try again.");
@@ -44,17 +43,3 @@ loginForm.addEventListener("submit", function (event) {
     alert("User not registered. Please register first.");
   }
 });
-
-
-
-/*
-// Check isLogin before accessing the registration page
-const registrationLink = document.getElementById("registration-link");
-registrationLink.addEventListener("click", function (event) {
-  if (isLogin) {
-    // If user is logged in, redirect them to the home page
-    event.preventDefault();
-    window.location.href = "/student-home-page.html";
-  }
-});
-*/
