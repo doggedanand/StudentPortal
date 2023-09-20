@@ -7,22 +7,22 @@ function showNavToogler() {
 //====For active student side bar menu====//
 
 function work() {
-  console.log("under work");
+  // console.log("under work");
   var d = document.getElementsByClassName("student-navbar");
 }
 if (document.readyState == "loading") {
   // Still loading
   document.addEventListener("DOMContentLoaded", work);
-  console.log(window.loadSudentSideBar);
+  // console.log(window.loadSudentSideBar);
 } else {
   //Dom ready
-  console.log("Dom is ready");
+  // console.log("Dom is ready");
 }
-console.log("loadStudentSideBar :", window.loadSudentSideBar);
+// console.log("loadStudentSideBar :", window.loadSudentSideBar);
 
 setTimeout(() => {
-  console.log("loadStudentSideBar :", window.loadSudentSideBar);
-  console.log("Dom content loaded");
+  // console.log("loadStudentSideBar :", window.loadSudentSideBar);
+  // console.log("Dom content loaded");
   if (window.loadSudentSideBar == true) {
     const item1 = document.getElementById("item1");
     const item2 = document.getElementById("item2");
