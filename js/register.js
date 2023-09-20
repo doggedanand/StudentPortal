@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const lastName = document.getElementById("lastName").value;
       const email = document.getElementById("email").value;
       const username = document.getElementById("username").value;
-      console.log("username :", username);
       const password = document.getElementById("password").value;
       const confirmPassword = document.getElementById("confirmPassword").value;
       const gender = document.getElementById("gender").value;
@@ -38,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         username: username,
         password: password,
         gender: gender,
+        isLogin: false,
       };
       console.log("user :", user);
       // Push the new user object into the userData array

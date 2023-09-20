@@ -10,13 +10,13 @@ loginForm.addEventListener("submit", function (event) {
   const username = document.getElementById("username").value;
 
   const password = document.getElementById("password").value;
-  console.log("username :", username);
+
   // Fetch all user data from local storage
   const allUserDataJSON = localStorage.getItem("userData");
 
   if (allUserDataJSON) {
     const allUserData = JSON.parse(allUserDataJSON);
-
+    console.log('allUserData :',typeof allUserData)
     // Loop through all user data
     for (const userData of allUserData) {
       console.log("userData from localStorage :", userData);
@@ -25,11 +25,12 @@ loginForm.addEventListener("submit", function (event) {
         userData.password === password
       ) {
         alert("Login successful!");
-
+      
         // Set isLogin to true upon successful login
-        isLogin = true;
-
+        userData.isLogin = true;
+        localStorage.setItem("userData", JSON.stringify(userData));
         window.location.href = "/student-home-page.html";
+        return;
       } else if (
         (userData.email !== username && userData.username !== username) ||
         userData.password !== password
