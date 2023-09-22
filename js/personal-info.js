@@ -1,37 +1,35 @@
-
 var checkElement;
-test()
+test();
+
 function test() {
-  var allUserDataJSON = localStorage.getItem('userData')
-  var allUserData=JSON.parse(allUserDataJSON)
-  // console.log('allUserData.isLogin',allUserData.isLogin) 
+  var allUserDataJSON = localStorage.getItem("userData");
+  var allUserData = JSON.parse(allUserDataJSON);
 
   checkElement = setInterval(() => {
     if (document.getElementById("userID") !== null) {
-      addPersonSection();
+      addPersonSection(allUserData);
     }
   }, 50);
 }
 
-function addPersonSection() {
+function addPersonSection(allUserData) {
   clearInterval(checkElement);
-  // Get the data from local storage
-  let userData = localStorage.getItem("userData");
-  console.log('userData :',userData)
-  const allUserData = JSON.parse(userData);
-console.log('allUserData :',allUserData)
+
   const id = document.getElementById("userID");
 
   if (id !== null) {
-    for (const data of allUserData) {
-      var tempData = `
-              <p class="card-text fw-bold">User ID: ${data.id}</p>
-                  <p class="card-text">Name: ${data.firstName} ${data.lastName}</p>
-                  <p class="card-text">Email: ${data.email}</p>
-                  <p class="card-text">Gender: ${data.gender}</p>
-                   
-              `;
-      id.innerHTML = tempData;
+    const loggedInUsers = allUserData.filter((user) => user.isLogin === true);
+
+    if (loggedInUsers) {
+      loggedInUsers.forEach((user) => {
+        var tempData = `
+          <p class="card-text fw-bold">User ID: ${user.id}</p>
+          <p class="card-text">Name: ${user.firstName} ${user.lastName}</p>
+          <p class="card-text">Email: ${user.email}</p>
+          <p class="card-text">Gender: ${user.gender}</p>
+          `;
+        id.innerHTML = tempData;
+      });
     }
   }
 }
