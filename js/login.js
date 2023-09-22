@@ -2,13 +2,11 @@
 // // from that email
 
 const loginForm = document.querySelector("form");
-let isLogin = false; // Initialize isLogin as false
 
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const username = document.getElementById("username").value;
-
   const password = document.getElementById("password").value;
 
   // Fetch all user data from local storage
@@ -16,29 +14,23 @@ loginForm.addEventListener("submit", function (event) {
 
   if (allUserDataJSON) {
     const allUserData = JSON.parse(allUserDataJSON);
-    console.log('allUserData :',typeof allUserData)
-    // Loop through all user data
-    for (const userData of allUserData) {
-      console.log("userData from localStorage :", userData);
-      if (
+
+    // Find the user with matching credentials
+    const userIndex = allUserData.findIndex(
+      (userData) =>
         (userData.email === username || userData.username === username) &&
         userData.password === password
-      ) {
-        alert("Login successful!");
-      
-        // Set isLogin to true upon successful login
-        userData.isLogin = true;
-        localStorage.setItem("userData", JSON.stringify(userData));
-        window.location.href = "/student-home-page.html";
-        return;
-      } else if (
-        (userData.email !== username && userData.username !== username) ||
-        userData.password !== password
-      ) {
-        alert("Invalid username/email or password. Please try again.");
-      } else {
-        alert("User not registered. Please register first.");
-      }
+    );
+
+    if (userIndex !== -1) {
+      // Set isLogin to true upon successful login
+      allUserData[userIndex].isLogin = true;
+      localStorage.setItem("userData", JSON.stringify(allUserData));
+
+      alert("Login successful!");
+      window.location.href = "/student-home-page.html";
+    } else {
+      alert("Invalid username/email or password. Please try again.");
     }
   } else {
     alert("User not registered. Please register first.");
