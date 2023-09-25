@@ -36,3 +36,6 @@ loginForm.addEventListener("submit", function (event) {
     alert("User not registered. Please register first.");
   }
 });
+
+
+
