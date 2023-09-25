@@ -3,35 +3,39 @@ const logout = setInterval(() => {
   if (logoutButton) {
     userLogout();
   }
-}, 1000);
+}, 50);
 
 function userLogout() {
   clearInterval(logout);
 
   const logoutButton = document.getElementById("logout");
+  logoutButton.addEventListener("click", () => {
+    let logoutCheck = confirm("Are you sure want to logout!");
+    if (logoutCheck === true) {
+      // logoutButton.addEventListener("click", function (event) {
+      //   event.preventDefault();
 
-  logoutButton.addEventListener("click", function (event) {
-    event.preventDefault();
+        const allUserDataJSON = localStorage.getItem("userData");
 
-    const allUserDataJSON = localStorage.getItem("userData");
+        if (allUserDataJSON) {
+          const allUserData = JSON.parse(allUserDataJSON);
 
-    if (allUserDataJSON) {
-      const allUserData = JSON.parse(allUserDataJSON);
+          const loggedInUser = allUserData.find(
+            (userData) => userData.isLogin === true
+          );
 
-      const loggedInUser = allUserData.find(
-        (userData) => userData.isLogin === true
-      );
+          if (loggedInUser) {
+            loggedInUser.isLogin = false;
 
-      if (loggedInUser) {
-        loggedInUser.isLogin = false;
-
-        localStorage.setItem("userData", JSON.stringify(allUserData));
-        alert("Are you sure want to logout!");
-        window.location.href = "/login.html";
-      } else {
-        alert("You are already logout!");
-        window.location.href = "/login.html";
-      }
+            localStorage.setItem("userData", JSON.stringify(allUserData));
+          
+            window.location.href = "/login.html";
+          } else {
+            alert("You are already logout!");
+            window.location.href = "/login.html";
+          }
+        }
+      // });
     }
   });
 }
