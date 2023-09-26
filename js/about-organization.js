@@ -6,7 +6,7 @@ setTimeout(() => {
 
       data.forEach((item) => {
         const cardDiv = document.createElement("div");
-       
+
         cardDiv.className = " col-md-12  mb-3";
         if (item.row == "first") {
           cardDiv.innerHTML = `
