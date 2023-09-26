@@ -1,9 +1,15 @@
 // For load the notification dynamically
 
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("/db/notification.json")
-    .then((res) => res.json())
-    .then((data) => {
+fetch("/db/notification.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const checkNews = setInterval(() => {
+      if (document.querySelector(".card-body")) {
+        loadNews();
+      }
+    }, 50);
+    function loadNews() {
+      clearInterval(checkNews);
       const newsElement = document.querySelector(".card-body");
 
       data.forEach((info) => {
@@ -15,12 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         newsElement.appendChild(container);
       });
-    });
-});
+    }
+  });
 
 // For scroll notification bar
 
-setTimeout(() => {
+const checkNotification = setInterval(() => {
+  if (document.querySelector(".card-body")) {
+    loadNotificationData();
+  }
+}, 50);
+function loadNotificationData() {
+  clearInterval(checkNotification);
+
   const notificationBarContainer = document.querySelector(".card-body");
 
   const scrollSpeed = 1;
@@ -46,4 +59,4 @@ setTimeout(() => {
   notificationBarContainer.addEventListener("mouseleave", () => {
     scrollInterval = setInterval(scrollNotificationBar, 50);
   });
-}, 50);
+}
