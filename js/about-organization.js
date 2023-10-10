@@ -1,17 +1,16 @@
-const check = setInterval(() => {
-  if (document.getElementById("cardContainer")) {
-    loadCrowsel();
+const checkContainer = setInterval(() => {
+  var cardContainer = document.getElementById("cardContainer");
+  if (cardContainer) {
+    loadAboutOrgData(cardContainer);
   }
-});
+}, 1000);
 
-function loadCrowsel() {
-  clearInterval(check);
+function loadAboutOrgData() {
+  clearInterval(checkContainer);
 
   fetch("/db/about-organization.json")
     .then((response) => response.json())
     .then((data) => {
-      const cardContainer = document.getElementById("cardContainer");
-
       data.forEach((item) => {
         const cardDiv = document.createElement("div");
 
